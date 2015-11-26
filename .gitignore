@@ -2,3 +2,5 @@ out
 workspace.xml
 kotlin-koans.iml
 .idea/
+.classpath
+.project
