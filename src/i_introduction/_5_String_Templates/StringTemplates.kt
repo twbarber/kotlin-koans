@@ -1,6 +1,7 @@
 package i_introduction._5_String_Templates
 
 import util.*
+import java.util.regex.Pattern
 
 fun example1(a: Any, b: Any) =
         "This is some text in which variables ($a, $b) appear."
@@ -18,7 +19,7 @@ you don't need to escape a backslash by a backslash.
 String template entries (${42}) are allowed here.
 """
 
-fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
+fun getPattern() = """\d{2}\.\c{2}\.\d{4}"""
 
 fun example() = "13.06.1992".matches(getPattern().toRegex()) //true
 
@@ -34,4 +35,6 @@ fun todoTask4(): Nothing = TODO(
     documentation = doc4(),
     references = { getPattern(); month })
 
-fun task4(): String = todoTask4()
+fun task4(): String {
+    return """\w{2} \(\d{2} $month \d{4}\)"""
+}
