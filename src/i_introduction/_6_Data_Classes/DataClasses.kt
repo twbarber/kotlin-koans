@@ -1,6 +1,7 @@
 package i_introduction._6_Data_Classes
 
 import util.*
+import java.util.*
 
 fun todoTask7(): Nothing = TODO(
     """
@@ -13,10 +14,7 @@ fun todoTask7(): Nothing = TODO(
     references = { JavaCode7.Person("Alice", 29) }
 )
 
-class Person
 
-fun task7(): List<Person> {
-    todoTask7()
-    return listOf(/*Person("Alice", 29), Person("Bob", 31)*/)
-}
+fun task7(): List<Person> = listOf(Person("Alice", 29), Person("Bob", 31))
 
+data class Person(val name: String, val age: Int)
