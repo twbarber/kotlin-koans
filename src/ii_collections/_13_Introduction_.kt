@@ -19,6 +19,6 @@ fun example0(list: List<Int>) {
 }
 
 fun Shop.getSetOfCustomers(): Set<Customer> {
-    return todoCollectionTask()
+    return customers.toSet()
 }
 
